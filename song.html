@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tamil Songs Player</title>
+</head>
+<body>
+    <h1>Tamil Songs Player</h1>
+    
+    <ul>
+        {% for song in tamil_songs %}
+        <li>
+            <strong>{{ song.name }}</strong> by {{ song.artist }}
+            <audio controls>
+                <source src="{{ song.preview_url }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
